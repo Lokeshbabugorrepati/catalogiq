@@ -163,10 +163,10 @@ By making every field's confidence and evidence a **first-class part of the data
 
 | Name | Role |
 |---|---|
-| 🧑‍💻 *Your Name* | Frontend — pages, design system, deployment |
-| 🧑‍💻 *Friend 1* | Backend — authentication, Google OAuth |
-| 🧑‍💻 *Friend 2* | Backend — Gemini AI integration, product pipeline |
-| 🧑‍💻 *Friend 3* | Frontend — components, context, API layer |
+| 🧑‍💻 *G.LokeshBabu* | Frontend — pages, design system, deployment |
+| 🧑‍💻 *V.BalaChandra* | Backend — authentication, Google OAuth |
+| 🧑‍💻 *K.RamaSathmika* | Backend — Gemini AI integration, product pipeline |
+| 🧑‍💻 *V.Deekshitha* | Frontend — components, context, API layer |
 
 ## 🔮 Future Scope
 
