@@ -7,10 +7,14 @@ const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 const setTokenCookie = (res, payload) => {
   const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "7d" });
+  const isProd = process.env.NODE_ENV === "production";
   res.cookie("token", token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
+    secure: isProd, // cookies over HTTPS only in production
+    // Deployed frontend (Vercel) and backend (Render) live on different domains,
+    // so the cookie is "cross-site" and needs sameSite: "none" + secure: true to be sent at all.
+    // Locally, frontend/backend are both on localhost so "lax" works fine and doesn't need HTTPS.
+    sameSite: isProd ? "none" : "lax",
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
 };
