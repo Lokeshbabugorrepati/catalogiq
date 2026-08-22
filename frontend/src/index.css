@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply bg-canvas text-ink font-body antialiased;
+}
+
+.dark html, .dark body {
+  @apply bg-ink text-canvas;
+}
+
+.bg-blueprint-grid {
+  background-color: #F5F6F8;
+  background-image:
+    linear-gradient(rgba(41, 84, 216, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(41, 84, 216, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.dark .bg-blueprint-grid {
+  background-color: #0E1420;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* dimension leader line - the signature explainability motif */
+.leader-line {
+  stroke: #9AA3B2;
+  stroke-width: 1.25;
+  stroke-dasharray: 3 3;
+  fill: none;
+}
+.leader-dot {
+  fill: #2954D8;
+}
+
+::selection {
+  background: #2954D8;
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid #2954D8;
+  outline-offset: 2px;
+}
